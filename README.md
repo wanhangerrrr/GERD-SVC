@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MedCare Insight - GERD Detection System
 
-## Getting Started
+Project 1: Sistem Deteksi Dini Penyakit Gastroesophageal Reflux Disease Menggunakan Support Vector Classifier.
 
-First, run the development server:
+## Deskripsi
+Website ini adalah platform skrining kesehatan awal untuk mendeteksi risiko GERD berbasis AI. Menggunakan model klasifikasi Support Vector Machine (SVC) untuk menganalisis data klinis dan gaya hidup pengguna.
 
+## Fitur Utama
+- **Deteksi Dini GERD**: Form interaktif dengan validasi Zod untuk mengumpulkan data gejala.
+- **Analisis AI**: Fallback logic ke mock prediction SVC dengan visualisasi faktor risiko via Recharts.
+- **Dashboard Project**: Detail metodologi, pipeline model, dan metrik performa.
+- **Responsif & Modern**: UI premium dengan Tailwind CSS, Shadcn/UI, dan dukungan Dark Mode.
+
+## Instalasi & Cara Jalankan
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Jalankan Server Development
+```bash
+npm run dev
+```
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Integrasi Model ML (Produksi)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Untuk menghubungkan ke API ML asli, tambahkan URL endpoint ke file `.env.local`:
 
-## Learn More
+```env
+NEXT_PUBLIC_PREDICT_API_URL=http://your-ml-api.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Format Request (POST `/predict/gerd`)
+```json
+{
+  "usia": 25,
+  "jenis_kelamin": "Pria",
+  "frekuensi_heartburn": 4,
+  "regurgitasi": true,
+  "nyeri_dada": false,
+  "mual": true,
+  "batuk_malam": false,
+  "sulit_menelan": false,
+  "bmi": 24.5,
+  "perokok": false,
+  "konsumsi_kopi": 2,
+  "makan_malam_larut": true,
+  "stress_level": 6
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Format Response (Expected)
+```json
+{
+  "label": "Risiko Sedang",
+  "probability": 0.72,
+  "top_factors": ["frekuensi_heartburn", "perokok", "bmi"]
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Teknologi
+- **Frontend**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/UI & Lucide React
+- **Validation**: Zod & React Hook Form
+- **Animation**: Framer Motion
+- **Visualization**: Recharts
+- **State/Theme**: Next-Themes
