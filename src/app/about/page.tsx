@@ -55,7 +55,7 @@ export default function AboutPage() {
                                     <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">
                                         <CheckCircle2 className="h-4 w-4 text-primary" />
                                     </div>
-                                    <p className="text-slate-700 font-bold leading-relaxed">Mengembangkan algoritma diagnostik dengan akurasi klinis tinggi.</p>
+                                    <p className="text-slate-700 font-bold leading-relaxed">Mengembangkan algoritma diagnostik dengan validasi klinis.</p>
                                 </li>
                                 <li className="flex gap-4 items-start group">
                                     <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-1">

@@ -115,6 +115,7 @@ export default function ProjectPage() {
                 </section>
 
                 {/* Metrik Performa - High Contrast */}
+                {/* 
                 <section>
                     <div className="flex items-center gap-3 mb-8">
                         <div className="h-10 w-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
@@ -156,6 +157,7 @@ export default function ProjectPage() {
                         </div>
                     </Card>
                 </section>
+*/}
 
                 <section className="text-center pt-12 border-t">
                     <h3 className="text-2xl font-bold mb-6">Siap Menguji Tingkat Risiko Anda?</h3>

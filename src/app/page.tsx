@@ -24,11 +24,17 @@ export default function LandingPage() {
                 <span>Pusat Layanan Deteksi Dini Digital</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
-                Deteksi Dini Penyakit <span className="text-primary italic">GERD</span> dengan Akurasi AI
+                Deteksi Dini Penyakit <span className="text-primary italic">GERD</span>
               </h1>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
-                Gunakan teknologi Support Vector Classifier (SVC) untuk menganalisis risiko kesehatan lambung Anda secara cepat, mandiri, dan profesional.
-              </p>
+              <div className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
+                <p className="font-bold mb-2 text-slate-900">Disusun Oleh :</p>
+                <div className="space-y-1 font-semibold text-slate-600">
+                  <p>Raihan Ariq Muzakki</p>
+                  <p>Muhammad Hafiz Fassya</p>
+                  <p>Awang Andriansyah Hermawan</p>
+                  <p>Ryan Maulana</p>
+                </div>
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 <Button size="lg" className="rounded-md h-12 px-8 text-base font-bold shadow-md" asChild>
                   <Link href="/deteksi/gerd">
@@ -68,16 +74,6 @@ export default function LandingPage() {
                   className="object-cover"
                   priority
                 />
-              </div>
-              {/* Professional badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <HeartPulse className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <div className="text-sm font-black text-slate-900">94.2% Accuracy</div>
-                  <div className="text-xs text-slate-500 font-medium">Model Validation Rate</div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -174,7 +170,7 @@ export default function LandingPage() {
                   <div className="h-2 w-48 bg-slate-700 mx-auto rounded-full overflow-hidden">
                     <motion.div
                       className="h-full bg-primary"
-                      animate={{ width: ["0%", "94%", "94%"] }}
+                      animate={{ width: ["0%", "100%", "100%"] }}
                       transition={{ duration: 3, repeat: Infinity }}
                     />
                   </div>
