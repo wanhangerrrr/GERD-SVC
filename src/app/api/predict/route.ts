@@ -12,8 +12,13 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Proxy to FastAPI backend
-        const response = await fetch("http://localhost:8000/predict", {
+        // Determine the base URL for internal fetch on Vercel
+        const protocol = req.headers.get("x-forwarded-proto") || "http";
+        const host = req.headers.get("host");
+        const baseUrl = `${protocol}://${host}`;
+
+        // Proxy to FastAPI/Vercel Python backend
+        const response = await fetch(`${baseUrl}/api/ml_predict`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
