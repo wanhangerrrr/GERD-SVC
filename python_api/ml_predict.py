@@ -6,10 +6,9 @@ import os
 
 app = FastAPI(title="GERD Detector Vercel API")
 
-# Model path relative to this script in the api/ directory
+# Model path relative to this script in the same directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Root: .. -> src/lib/model/gerd_detector.joblib
-MODEL_PATH = os.path.join(BASE_DIR, "..", "src", "lib", "model", "gerd_detector.joblib")
+MODEL_PATH = os.path.join(BASE_DIR, "gerd_detector.joblib")
 
 class PredictionRequest(BaseModel):
     features: list[float]

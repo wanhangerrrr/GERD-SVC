@@ -1,13 +1,13 @@
 {
   "functions": {
-    "api/*.py": {
+    "python_api/*.py": {
       "runtime": "python"
     }
   },
   "rewrites": [
     {
       "source": "/api/ml_predict",
-      "destination": "api/ml_predict.py"
+      "destination": "python_api/ml_predict.py"
     }
   ]
 }
