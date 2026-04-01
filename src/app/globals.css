@@ -3,99 +3,103 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-background: hsl(210 40% 98%);
-  --color-foreground: hsl(222.2 47.4% 11.2%);
+  --color-background: hsl(142 20% 98%);
+  --color-foreground: hsl(142 80% 10%);
 
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222.2 47.4% 11.2%);
+  --color-card-foreground: hsl(142 80% 10%);
 
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222.2 47.4% 11.2%);
+  --color-popover-foreground: hsl(142 80% 10%);
 
-  --color-primary: hsl(210 100% 30%);
-  /* Professional Hospital Blue */
-  --color-primary-foreground: hsl(210 40% 98%);
+  --color-primary: hsl(142 76% 36%); /* Clinical Emerald */
+  --color-primary-foreground: hsl(0 0% 100%);
 
-  --color-secondary: hsl(210 40% 96.1%);
-  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --color-secondary: hsl(142 72% 20%); /* Deep Medical Green */
+  --color-secondary-foreground: hsl(0 0% 100%);
 
-  --color-muted: hsl(210 40% 94.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-muted: hsl(142 20% 95%);
+  --color-muted-foreground: hsl(142 10% 45%);
 
-  --color-accent: hsl(210 100% 96%);
-  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
+  --color-accent: hsl(142 76% 36%);
+  --color-accent-foreground: hsl(0 0% 100%);
 
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(210 40% 98%);
 
-  --color-border: hsl(214.3 31.8% 91.4%);
-  --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: hsl(210 100% 30%);
+  --color-border: hsl(142 20% 90%);
+  --color-input: hsl(142 20% 90%);
+  --color-ring: hsl(142 76% 36%);
 
-  --radius-lg: 0.5rem;
-  --radius-md: calc(0.5rem - 2px);
-  --radius-sm: calc(0.5rem - 4px);
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
 }
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: 142 20% 98%;
+    --foreground: 142 80% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 142 80% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-    --primary: 210 100% 30%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 94.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 100% 96%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: 142 80% 10%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 142 72% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 142 20% 95%;
+    --muted-foreground: 142 10% 45%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 210 100% 30%;
+    --border: 142 20% 90%;
+    --input: 142 20% 90%;
+    --ring: 142 76% 36%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 7%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 100% 50%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 142 40% 4%;
+    --foreground: 0 0% 98%;
+    --card: 142 40% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 142 40% 4%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 76% 45%;
+    --primary-foreground: 142 80% 10%;
+    --secondary: 142 63% 19%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 142 40% 10%;
+    --muted-foreground: 142 10% 65%;
+    --accent: 142 76% 45%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 210 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 40% 15%;
+    --input: 142 40% 15%;
+    --ring: 142 76% 45%;
   }
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 .container {
-  @apply mx-auto px-4 md:px-6 max-w-7xl;
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full;
 }
 
 /* Base utility for clean medical cards */

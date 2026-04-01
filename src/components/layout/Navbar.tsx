@@ -29,11 +29,11 @@ export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-slate-950 shadow-sm">
+        <header className="sticky top-0 z-50 w-full border-b bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm transition-all duration-300">
             <div className="container flex h-16 items-center justify-between">
                 <div className="flex items-center gap-2">
                     <Link href="/" className="flex items-center space-x-2 group">
-                        <div className="p-1.5 bg-primary rounded-md group-hover:bg-primary/90 transition-colors">
+                        <div className="p-1.5 bg-primary rounded-md group-hover:bg-primary/90 transition-colors shadow-sm">
                             <Activity className="h-5 w-5 text-white" />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
@@ -51,8 +51,8 @@ export function Navbar() {
                             className={cn(
                                 "px-4 py-2 text-sm font-semibold transition-all rounded-md",
                                 pathname === item.href
-                                    ? "bg-slate-100 text-primary dark:bg-slate-800"
-                                    : "text-slate-600 dark:text-slate-400 hover:text-primary hover:bg-slate-50 dark:hover:bg-slate-900"
+                                    ? "text-primary font-black scale-105"
+                                    : "text-slate-500 hover:text-primary transition-all"
                             )}
                         >
                             {item.name}

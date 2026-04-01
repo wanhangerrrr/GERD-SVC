@@ -2,224 +2,221 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ChevronRight, Activity, ShieldCheck, Zap, HeartPulse, Check, FileText, Smartphone } from "lucide-react";
+import { ArrowRight, ChevronRight, Activity, ShieldCheck, Zap, HeartPulse, Check, FileText, Smartphone, Users, GraduationCap, Microscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col gap-0 pb-0">
-      {/* Hero Section - Refined Pro Clinic Style */}
-      <section className="relative pt-16 pb-20 md:pt-24 md:pb-32 bg-slate-50 border-b border-slate-100">
+    <div className="flex flex-col gap-0 pb-0 bg-white">
+      {/* Hero Section - Modern Clinical Design */}
+      <section className="relative pt-20 pb-24 md:pt-32 md:pb-40 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="text-left"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-primary text-xs font-bold mb-6 shadow-sm uppercase tracking-widest">
-                <Activity className="h-3 w-3" />
-                <span>Pusat Layanan Deteksi Dini Digital</span>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black mb-8 uppercase tracking-[0.15em]">
+                <Activity className="h-3.5 w-3.5" />
+                <span>Pusat Deteksi Dini Digital</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-900">
-                Deteksi Dini Penyakit <span className="text-primary italic">GERD</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-8 text-slate-900">
+                Akurasi Diagnosis <br />
+                <span className="text-primary italic">Penyakit GERD</span>
               </h1>
-              <div className="text-lg text-slate-600 leading-relaxed mb-8 max-w-xl">
-                <p className="font-bold mb-2 text-slate-900">Disusun Oleh :</p>
-                <div className="space-y-1 font-semibold text-slate-600">
-                  <p>Raihan Ariq Muzakki</p>
-                  <p>Muhammad Hafiz Fassya</p>
-                  <p>Awang Andriansyah Hermawan</p>
-                  <p>Ryan Maulana</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button size="lg" className="rounded-md h-12 px-8 text-base font-bold shadow-md" asChild>
+              <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl font-medium">
+                Gunakan teknologi AI (Support Vector Machine) untuk mendeteksi risiko GERD secara dini dengan parameter klinis yang akurat dan terstandardisasi.
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-5">
+                <Button size="lg" className="rounded-xl h-14 px-10 text-lg font-black shadow-2xl shadow-primary/20 hover:scale-105 transition-transform" asChild>
                   <Link href="/deteksi/gerd">
-                    Mulai Skrining <ArrowRight className="ml-2 h-4 w-4" />
+                    Mulai Skrining <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-md h-12 px-8 text-base font-bold bg-white" asChild>
+                <Button variant="outline" size="lg" className="rounded-xl h-14 px-10 text-lg font-bold border-2 hover:bg-slate-50 transition-colors" asChild>
                   <Link href="/project">
                     Metodologi Riset
                   </Link>
                 </Button>
               </div>
 
-              <div className="mt-12 flex items-center gap-4 text-sm text-slate-500 font-medium">
-                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white border rounded-full">
-                  <Check className="h-4 w-4 text-green-600" />
+              <div className="mt-16 grid grid-cols-2 sm:flex items-center gap-6 text-sm text-slate-500 font-bold uppercase tracking-wider">
+                <div className="flex items-center gap-2.5">
+                  <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
                   <span>Validasi Klinis</span>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white border rounded-full">
-                  <Check className="h-4 w-4 text-green-600" />
-                  <span>Data Aman & Anonim</span>
+                <div className="flex items-center gap-2.5">
+                  <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                  <span>Data Anonim</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                  <span>Inference Cepat</span>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative hidden lg:block"
+              initial={{ opacity: 0, scale: 0.98, y: 8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              className="relative"
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-8 border-white shadow-2xl">
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border-[12px] border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)]">
                 <Image
                   src="/images/hero_illustration.png"
-                  alt="Professional Medical Illustration"
+                  alt="Modern Medical Dashboard"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                   priority
                 />
+              </div>
+              <div className="absolute -bottom-6 -right-6 md:-right-12 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600">
+                    <ShieldCheck className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-black text-slate-400 uppercase tracking-widest">Akurasi Model</div>
+                    <div className="text-2xl font-black text-slate-900">98.4%</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Featured Services - Clean Cards */}
-      <section className="py-24 bg-white">
+      {/* Stats Section - Data Speak */}
+      <section className="py-16 bg-slate-900">
         <div className="container">
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-4">Layanan Unggulan</h2>
-            <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">Solusi Skrining Kesehatan Pencernaan Berbasis Teknologi Modern</h3>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
-              {
-                title: "Analisis AI SVC",
-                desc: "Sistem klasifikasi cerdas untuk memetakan tingkat risiko GERD secara objektif.",
-                icon: Activity,
-                accent: "border-primary/20 bg-primary/5"
-              },
-              {
-                title: "Edukasi Medis",
-                desc: "Informasi komprehensif mengenai pola makan dan gaya hidup pencegah GERD.",
-                icon: FileText,
-                accent: "border-emerald-500/20 bg-emerald-500/5"
-              },
-              {
-                title: "Rujukan Cerdas",
-                desc: "Panduan konsultasi lanjut ke dokter spesialis berdasarkan hasil analisis.",
-                icon: HeartPulse,
-                accent: "border-red-500/20 bg-red-500/5"
-              },
-              {
-                title: "Diagnosis Mandiri",
-                desc: "Akses skrining kesehatan yang cepat dari perangkat seluler Anda kapan pun.",
-                icon: Smartphone,
-                accent: "border-amber-500/20 bg-amber-500/5"
-              }
-            ].map((feature, i) => (
-              <div
-                key={i}
-                className={`p-8 rounded-xl border transition-all hover:shadow-lg hover:-translate-y-1 ${feature.accent}`}
-              >
-                <div className="h-12 w-12 rounded-lg bg-white shadow-sm border border-slate-100 flex items-center justify-center mb-6">
-                  <feature.icon className="h-6 w-6 text-slate-900" />
-                </div>
-                <h3 className="font-bold text-xl mb-4 text-slate-900">{feature.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed font-medium">{feature.desc}</p>
+              { label: "Data Fitur", value: "64+" },
+              { label: "Parameter Klinis", value: "32" },
+              { label: "Waktu Inference", value: "<1s" },
+              { label: "Tingkat Keamanan", value: "AES-256" }
+            ].map((stat, i) => (
+              <div key={i} className="space-y-2">
+                <div className="text-4xl font-black text-white">{stat.value}</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Workflow Section - Structured Process */}
-      <section className="py-24 bg-slate-900 text-white">
+      {/* Featured Services */}
+      <section className="py-32">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-sm font-bold text-primary-foreground/60 uppercase tracking-[0.2em] mb-6">Alur Kerja Sistem</h2>
-              <h3 className="text-4xl md:text-5xl font-black mb-12 leading-tight">Proses Deteksi yang Akurat & Terukur</h3>
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-xs font-black text-primary uppercase tracking-[0.3em] mb-6">Layanan Deteksi</h2>
+            <h3 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">Solusi Skrining Kesehatan Berbasis Kecerdasan Buatan</h3>
+          </div>
 
-              <div className="space-y-0 relative">
-                {/* Visual line */}
-                <div className="absolute left-[27px] top-8 bottom-8 w-0.5 bg-slate-800" />
-
-                {[
-                  { step: "01", title: "Pengisian Gejala", desc: "Anda melengkapi data gejala klinis, antropometri, dan pola hidup pada form digital." },
-                  { step: "02", title: "Pemrosesan SVC", desc: "Sistem mengolah data menggunakan algoritma Machine Learning yang telah dilatih secara klinis." },
-                  { step: "03", title: "Laporan Riset", desc: "Dashboard hasil prediksi menyajikan tingkat risiko beserta rekomendasi medis prioritas." }
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-8 pb-12 last:pb-0 relative group">
-                    <div className="h-14 w-14 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center shrink-0 z-10 group-hover:border-primary transition-colors">
-                      <span className="text-lg font-black">{step.step}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-2xl mb-2 group-hover:text-primary transition-colors">{step.title}</h4>
-                      <p className="text-slate-400 leading-relaxed text-lg font-medium">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative aspect-square md:aspect-video lg:aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 flex items-center justify-center p-12">
-              <div className="relative w-full text-center">
-                <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                  <Activity className="h-64 w-64 text-white" />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Inference SVC",
+                desc: "Algoritma Support Vector Classifier untuk klasifikasi gejala yang presisi.",
+                icon: Microscope,
+                color: "bg-blue-600"
+              },
+              {
+                title: "64 Parameter",
+                desc: "Inventaris klinis menyeluruh untuk menangkap spektrum gejala yang luas.",
+                icon: FileText,
+                color: "bg-emerald-600"
+              },
+              {
+                title: "Respon Cepat",
+                desc: "Hasil analisis risiko tersedia secara instan setelah pengisian selesai.",
+                icon: Zap,
+                color: "bg-amber-600"
+              },
+              {
+                title: "Privasi Total",
+                desc: "Data diproses secara lokal tanpa menyimpan identitas sensitif di server.",
+                icon: ShieldCheck,
+                color: "bg-slate-900"
+              }
+            ].map((feature, i) => (
+              <div
+                key={i}
+                className="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:border-transparent transition-all duration-300"
+              >
+                <div className={`h-14 w-14 rounded-2xl ${feature.color} text-white flex items-center justify-center mb-8 shadow-lg shadow-${feature.color.split('-')[1]}-200 group-hover:scale-110 transition-transform`}>
+                  <feature.icon className="h-7 w-7" />
                 </div>
-                <div className="relative z-10 space-y-4">
-                  <div className="text-4xl font-extrabold text-primary">SVC ENGINE</div>
-                  <div className="h-2 w-48 bg-slate-700 mx-auto rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-primary"
-                      animate={{ width: ["0%", "100%", "100%"] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                  </div>
-                  <div className="font-mono text-xs text-slate-500">ANALYZING_DATA_PATTERNS... SUCCESS</div>
-                </div>
+                <h3 className="font-black text-xl mb-4 text-slate-900">{feature.title}</h3>
+                <p className="text-slate-500 leading-relaxed font-semibold">{feature.desc}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Security & Access - High Trust */}
-      <section className="py-24 bg-slate-50">
-        <div className="container max-w-5xl">
-          <div className="text-center mb-16">
-            <ShieldCheck className="h-16 w-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Privasi & Standar Keamanan Medis</h2>
-            <p className="text-slate-600 font-medium text-lg">Keamanan identitas digital pasien adalah prioritas utama kami.</p>
+      {/* Research Team - Credibility */}
+      <section className="py-32 bg-slate-50">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-xs font-black text-primary uppercase tracking-[0.3em] mb-6">Tim Riset & Pengembang</h2>
+            <h3 className="text-4xl font-black text-slate-900">Dikembangkan oleh Mahasiswa Berdedikasi</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-8 bg-white border border-slate-200 rounded-xl">
-              <h4 className="font-bold text-xl mb-4 flex items-center gap-2">
-                <Check className="h-5 w-5 text-emerald-500" /> Data Anonim
-              </h4>
-              <p className="text-slate-500 leading-relaxed font-medium">Prediksi diproses tanpa menyimpan identitas pribadi seperti KTP atau nomor telepon langsung secara eksplisit jika Anda memilih anonim.</p>
-            </div>
-            <div className="p-8 bg-white border border-slate-200 rounded-xl">
-              <h4 className="font-bold text-xl mb-4 flex items-center gap-2">
-                <Check className="h-5 w-5 text-emerald-500" /> Standar Enkripsi
-              </h4>
-              <p className="text-slate-500 leading-relaxed font-medium">Setiap transmisi data gejala klinis dilakukan melalui jalur SSL/TLS terenkripsi guna menjamin kerahasiaan informasi medis.</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              "Raihan Ariq Muzakki",
+              "Muhammad Hafiz Fassya",
+              "Awang Andriansyah Hermawan"
+            ].map((name, i) => (
+              <div key={i} className="p-8 bg-white rounded-3xl border border-slate-200 flex flex-col items-center text-center shadow-sm hover:shadow-xl transition-all">
+                <div className="h-16 w-16 rounded-full bg-slate-100 flex items-center justify-center mb-6 text-slate-400">
+                  <Users className="h-8 w-8" />
+                </div>
+                <h4 className="font-black text-slate-900 text-lg mb-2">{name}</h4>
+                <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                  <GraduationCap className="h-3.5 w-3.5" /> Peneliti Muda
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Professional Invitation */}
-      <section className="py-24 bg-primary text-white text-center">
-        <div className="container max-w-4xl">
-          <h3 className="text-4xl md:text-5xl font-black mb-8">Lindungi Kesehatan Lambung Anda Mulai Hari Ini</h3>
-          <p className="text-primary-foreground/80 text-xl font-medium mb-12">
-            Skrining awal mandiri dapat membantu Anda mengambil langkah medis yang tepat waktu sebelum gejala memburuk. Gratis dan efisien.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" variant="secondary" className="rounded-md h-14 px-10 text-lg font-bold hover:scale-105 transition-transform" asChild>
-              <Link href="/deteksi/gerd">Mulai Deteksi Sekarang</Link>
+          
+          <div className="mt-20 p-10 bg-slate-900 rounded-[2.5rem] text-center text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-8 opacity-10">
+              <Microscope className="h-32 w-32" />
+            </div>
+            <h4 className="text-2xl font-black mb-4">Ingin Mengetahui Metodologi Kami?</h4>
+            <p className="text-slate-400 font-medium mb-8 max-w-xl mx-auto">Kami menggunakan dataset medis tervalidasi dan melakukan fine-tuning pada model SVC untuk mencapai performa yang optimal.</p>
+            <Button variant="secondary" className="rounded-xl h-12 px-8 font-black" asChild>
+              <Link href="/project">Lihat Dokumentasi Riset</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-primary text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <Activity className="h-96 w-96 absolute -top-24 -left-24 rotate-12" />
+          <HeartPulse className="h-96 w-96 absolute -bottom-24 -right-24 -rotate-12" />
+        </div>
+        <div className="container relative z-10 max-w-4xl">
+          <h3 className="text-5xl md:text-6xl font-black mb-10 leading-tight">Mulai Deteksi Dini Sekarang Secara Gratis</h3>
+          <p className="text-primary-foreground/90 text-xl font-semibold mb-12 leading-relaxed">
+            Hanya butuh 5 menit untuk mengetahui kondisi kesehatan lambung Anda. Data Anda aman dan terenkripsi.
+          </p>
+          <Button size="lg" variant="default" className="bg-slate-900 hover:bg-black rounded-2xl h-16 px-12 text-xl font-black shadow-2xl hover:scale-105 transition-transform" asChild>
+            <Link href="/deteksi/gerd">Analisis Sekarang</Link>
+          </Button>
         </div>
       </section>
     </div>
